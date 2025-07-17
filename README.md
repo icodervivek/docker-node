@@ -1,62 +1,76 @@
-# Docker Commands Cheat Sheet
+## 🌐 Node.js + Express App (DockerHub)
 
-## 🐳 Container Lifecycle
+This project includes a Node.js and Express server that has been containerized and pushed to DockerHub.
+
+### ▶️ Run Command:
+
+```bash
+docker run -it -p 8000:8000 spidivivs/nodejs-demo
+
+
+# 🐳 Docker Commands Cheat Sheet
+
+This is a collection of essential Docker commands with use cases.  
+It also includes how to run a Node.js + Express server Docker image hosted on DockerHub.
+
+---
+
+## 🐚 Container Lifecycle
 
 - `docker run -it ubuntu`  
-  👉 Runs an interactive Ubuntu container.
+  ➤ Run an interactive Ubuntu container.
 
 - `docker container ls`  
-  👉 Lists **running** containers only.
+  ➤ List **running** containers only.
 
 - `docker container ls -a`  
-  👉 Lists **all** containers (both running and stopped).
+  ➤ List **all** containers (running and stopped).
 
 - `docker start <container_name_or_id>`  
-  👉 Starts an existing stopped container.  
-  Example:  
-  `docker start gallant_hopper`
+  ➤ Start an existing container.  
+  _Example:_ `docker start gallant_hopper`
 
 - `docker stop <container_name_or_id>`  
-  👉 Stops a running container.  
-  Example:  
-  `docker stop gallant_hopper`
+  ➤ Stop a running container.  
+  _Example:_ `docker stop gallant_hopper`
 
 - `docker exec -it <container_name_or_id> bash`  
-  👉 Opens an interactive shell inside a running container.  
-  Example:  
-  `docker exec -it gallant_hopper bash`
+  ➤ Open a shell in a running container.  
+  _Example:_ `docker exec -it gallant_hopper bash`
 
-## 📂 Docker Images
+---
+
+## 🗂️ Docker Images
 
 - `docker images`  
-  👉 Lists all downloaded Docker images on your machine.
+  ➤ View all downloaded Docker images.
 
 - `docker build -t <image_name> .`  
-  👉 Builds a Docker image from a Dockerfile in the current directory.  
-  Example:  
-  `docker build -t nodejs-demo .`
+  ➤ Build an image from a Dockerfile in the current directory.  
+  _Example:_ `docker build -t nodejs-demo .`
 
 - `docker build -t <username>/<image_name> .`  
-  👉 Builds an image with a specific DockerHub namespace.  
-  Example:  
-  `docker build -t spidivivs/nodejs-demo .`
+  ➤ Tag your image for DockerHub.  
+  _Example:_ `docker build -t spidivivs/nodejs-demo .`
 
 - `docker push <username>/<image_name>`  
-  👉 Pushes your image to DockerHub.  
-  Example:  
-  `docker push spidivivs/nodejs-demo`
+  ➤ Push your image to DockerHub.  
+  _Example:_ `docker push spidivivs/nodejs-demo`
+
+---
 
 ## 🚀 Running Applications
 
 - `docker run -it node`  
-  👉 Runs an interactive container from the Node.js image.
+  ➤ Run an interactive container from the Node.js image.
 
 - `docker run -it -p <host_port>:<container_port> <image_name>`  
-  👉 Maps host port to container port for accessing apps.  
-  Example:  
-  `docker run -it -p 8000:1025 mailhog/mailhog`
+  ➤ Run a container and map host port to container port.  
+  _Example:_ `docker run -it -p 8000:1025 mailhog/mailhog`
 
 - `docker exec -it <container_id> bash`  
-  👉 Opens a terminal session inside a running container using container ID.  
-  Example:  
-  `docker exec -it ddjkj333j bash`
+  ➤ Open a shell in a running container using container ID.  
+  _Example:_ `docker exec -it ddjkj333j bash`
+
+---
+
