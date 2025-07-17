@@ -6,7 +6,7 @@ This project includes a Node.js and Express server that has been containerized a
 
 ```bash
 docker run -it -p 8000:8000 spidivivs/nodejs-demo
-
+```
 
 # 🐳 Docker Commands Cheat Sheet
 
@@ -72,5 +72,4 @@ It also includes how to run a Node.js + Express server Docker image hosted on Do
   ➤ Open a shell in a running container using container ID.  
   _Example:_ `docker exec -it ddjkj333j bash`
 
----
 
